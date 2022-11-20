@@ -1,0 +1,31 @@
+{
+  "name": "Honolulu-Aquarium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "update": "ncu -u",
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frodo-Web/Honolulu-Aquarium.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frodo-Web/Honolulu-Aquarium/issues"
+  },
+  "homepage": "https://github.com/Frodo-Web/Honolulu-Aquarium#readme",
+  "devDependencies": {
+    "next": "^13.0.4",
+    "npm-check-updates": "^16.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.56.1"
+  }
+}
