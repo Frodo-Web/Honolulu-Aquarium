@@ -12,7 +12,7 @@ const RootLayout = ({ children }) => {
         </html>
     );
 }
-const Body = async ({ children }) => {
+const Body = async({ children }) => {
     return (
         <div className="body">
             {children}
