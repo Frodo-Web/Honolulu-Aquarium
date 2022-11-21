@@ -1,4 +1,4 @@
-export const shows = [
+const shows = [
     {
         id: '0',
         title: 'Show 1',
@@ -16,3 +16,5 @@ export const shows = [
             'Show 2 body',
     },
 ]
+
+export default shows;

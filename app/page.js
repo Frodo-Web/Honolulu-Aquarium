@@ -1,6 +1,6 @@
 import Index from './(pages)/index';
 
-const Page = async () => {
+const Page = async() => {
     return (
         <>
             <Index />

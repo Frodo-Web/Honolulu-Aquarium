@@ -1,13 +1,10 @@
-import { Suspense } from "react";
-
-const fetchData = async () => {
-    const res = await fetch(`${process.env.HOST}/api/shows`);
-    // OR LOCAL DATA IMPORT / DATABASE REQUEST IF USE_API=NO
-    return res.json();
-}
+import { Suspense } from 'react';
+import fetchAPI from '@lib/fetchAPI';
 
 const Shows = async () => {
-    const shows = fetchData();
+
+    const shows = fetchAPI('api/shows', 'shows.js', 'DATABASE REQUEST GOES HERE');
+    
     return (
         <>
             <div>
