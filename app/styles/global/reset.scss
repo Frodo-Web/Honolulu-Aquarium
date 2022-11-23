@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

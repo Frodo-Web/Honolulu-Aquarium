@@ -1,10 +1,12 @@
-import Header from './components/Header';
+import '@styles/global/main.scss';
+import styles from '@styles/layout.module.scss';
+import Header from './components/header/Header';
 
 const RootLayout = ({ children }) => {
     return (
         <html lang="en">
             <body>
-                <div className="honolulu-aquarium">
+                <div className={styles.honolulu_aquarium}>
                     <Header />
                     <Body children={children} />
                 </div>
