@@ -4,10 +4,13 @@ import Schedule from './Schedule';
 import Navbar from './Navbar';
 import BuyTicketButton from './BuyTicketButton';
 import Search from './Search';
+import localFont from '@next/font/local'
+
+const LEMONMILK = localFont({ src: '../../fonts/lemon_milk/LEMONMILK-Regular.otf' })
 
 const Header = async() => {
     return (
-        <div className={styles.header}>
+        <div className={`${styles.header} ${LEMONMILK.className}`}>
             <Logo />
             <Schedule />
             <Navbar />

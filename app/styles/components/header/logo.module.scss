@@ -1,7 +1,18 @@
+@use '@styles/global/variable.scss' as v;
+
 .image {
     height: 70px;
     width: auto;
 }
 .logo {
-    
+    position: relative;
+    width: v.$logo_width;
+    margin-right: 20px;
+}
+.logo::after {
+    content: 'Honolulu Aquarium';
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    white-space: nowrap;
 }

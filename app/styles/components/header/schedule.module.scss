@@ -1,0 +1,20 @@
+@use '@styles/global/variable.scss' as v;
+
+.schedule {
+    background: url(./media/texture.svg) no-repeat center/cover;
+    width: v.$schedule_width;
+    height: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.label {
+    font-size: 12px;
+}
+.value {
+    font-size: 24px;
+}

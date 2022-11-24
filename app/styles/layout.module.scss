@@ -1,3 +1,8 @@
+@use '@styles/global/variable.scss' as v;
+
 .honolulu_aquarium {
     position: relative;
+    background: linear-gradient(180deg,#63acf0 .02%,#164683 93.75%,#164683 100%);
+    min-height: 100vh;
+    color: v.$white;
 }

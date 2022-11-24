@@ -6,6 +6,7 @@ const nextConfig = {
       ...config.resolve.alias,
       '@lib': path.resolve(__dirname, 'lib/'),
       '@styles': path.resolve(__dirname, 'app/styles'),
+      '@fonts': path.resolve(__dirname, 'app/fonts'),
       '@data': path.resolve(__dirname, 'app/localData'),
     };
 
