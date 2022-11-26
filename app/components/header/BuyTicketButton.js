@@ -1,6 +1,9 @@
+import styles from '@styles/components/header/buy_ticket_button.module.scss';
+
 const BuyTicketButton = async() => {
     return (
-        <div>
+        <div className={styles.button}>
+            Buy tickets
         </div>
     )
 }
