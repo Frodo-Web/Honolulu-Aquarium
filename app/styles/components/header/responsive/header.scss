@@ -1,0 +1,13 @@
+@use '@styles/breakpoints/media.scss' as *;
+@use './variables/1280-1680.scss' as *;
+
+@mixin responsive {
+    .header {
+        @include media(">=widescreen-720p", "<widescreen-1080p") {
+            height: $header_height;
+        }
+        @include media(">=tablet", "<widescreen-720p") {
+            height: 60px;
+        }
+    }
+}

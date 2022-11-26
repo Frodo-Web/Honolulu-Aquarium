@@ -1,14 +1,11 @@
 @use './variables.scss' as v;
-
+@use './responsive/header.scss' as r;
 .header {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     padding: 0px 75px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
     display: grid;
     grid-template-columns: v.$logo_width v.$schedule_width 1fr v.$ticketsButton_width v.$searchButton_width;
     gap: 20px;
@@ -16,4 +13,4 @@
     width: 100%;
     height: v.$header_height;
 }
-  
+@include r.responsive;
