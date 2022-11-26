@@ -5,10 +5,35 @@
 .menu {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 30px;
+    & a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 12px;
+        letter-spacing: 1px;
+        // text-shadow: 1px 1px black;
+        line-height: 22px;
+    }
 }
-.menu a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 12px;
+.firstLevelItem {
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        background: url(./media/wave.svg) repeat-x left/auto 4px;
+        width: 0;
+        opacity: 0;
+        height: 5px;
+        transition: all ease 0.5s;
+    }
+    &:hover {
+        text-shadow: 1px 1px black;
+        &::after {
+            width: 100%;
+            opacity: 1;
+        }
+    }
 }

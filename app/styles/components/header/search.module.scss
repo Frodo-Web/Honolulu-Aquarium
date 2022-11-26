@@ -1,6 +1,8 @@
+@use './variables.scss' as v;
+
 .search {
     background: url(./media/search.svg) no-repeat center/contain;
-    width: 22px;
+    width: v.$searchButton_width;
     height: 22px;
     cursor: pointer;
 }

@@ -1,0 +1,22 @@
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.line {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1px;
+    &:first-child {
+        top: 0;
+    }
+    &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+    &:last-child {
+        bottom: 0;
+    }
+}

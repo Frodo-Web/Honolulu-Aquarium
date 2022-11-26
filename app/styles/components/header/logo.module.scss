@@ -1,4 +1,4 @@
-@use '@styles/global/variable.scss' as v;
+@use './variables.scss' as v;
 
 .image {
     height: 70px;
@@ -7,12 +7,19 @@
 .logo {
     position: relative;
     width: v.$logo_width;
-    margin-right: 20px;
-}
-.logo::after {
-    content: 'Honolulu Aquarium';
-    position: absolute;
-    bottom: 0;
-    font-size: 12px;
-    white-space: nowrap;
+    &::after {
+        content: 'Honolulu Aquarium';
+        position: absolute;
+        bottom: 3px;
+        font-size: 12px;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        z-index: -1;
+        transition: all ease 0.5s;
+    }
+    &:hover::after {
+        text-shadow: 1px 1px black;
+        bottom: 30%;
+        z-index: 1;
+    }
 }

@@ -1,4 +1,4 @@
-@use '@styles/global/variable.scss' as v;
+@use './variables.scss' as v;
 
 .header {
     position: fixed;
@@ -6,9 +6,14 @@
     left: 0;
     z-index: 1;
     padding: 0px 75px;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    display: grid;
+    grid-template-columns: v.$logo_width v.$schedule_width 1fr v.$ticketsButton_width v.$searchButton_width;
+    gap: 20px;
     align-items: center;
     width: 100%;
     height: v.$header_height;
 }
+  

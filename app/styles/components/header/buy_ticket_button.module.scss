@@ -1,3 +1,5 @@
+@use './variables.scss' as v;
+
 .button {
     cursor: pointer;
     background-color: #f9c84a;
@@ -7,7 +9,7 @@
     height: 50px;
     line-height: 50px;
     width: 100%;
-    max-width: 180px;
+    max-width: v.$ticketsButton_width;
     text-align: center;
     letter-spacing: 1px;
     font-weight: 500;

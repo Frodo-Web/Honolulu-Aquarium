@@ -6,23 +6,23 @@ const Navbar = async () => {
         <nav className={styles.navbar}>
             <ul className={styles.menu}>
                 <li>
-                    <Link href="/">Plan a visit</Link>
+                    <FirstLevelItem text='Plan a visit' to='/' />
                     <ul></ul>
                 </li>
                 <li>
-                    <Link href="/">Experiences</Link>
+                    <FirstLevelItem text='Experiences' to='/' />
                     <ul></ul>
                 </li>
                 <li>
-                    <Link href="/">{'Animals & Exhibits'}</Link>
+                    <FirstLevelItem text='Animals & Exhibits' to='/' />
                     <ul></ul>
                 </li>
                 <li>
-                    <Link href="/">{'Conservation & Community'}</Link>
+                    <FirstLevelItem text='Conservation & Community' to='/' />
                     <ul></ul>
                 </li>
                 <li>
-                    <Link href="/">About Us</Link>
+                    <FirstLevelItem text='About Us' to='/' />
                     <ul></ul>
                 </li>
             </ul>
@@ -30,3 +30,7 @@ const Navbar = async () => {
     )
 }
 export default Navbar;
+
+const FirstLevelItem = async ({ text, to }) => {
+    return <Link className={styles.firstLevelItem} href={to}>{text}</Link>
+}

@@ -4,6 +4,7 @@ import Schedule from './Schedule';
 import Navbar from './Navbar';
 import BuyTicketButton from './BuyTicketButton';
 import Search from './Search';
+import Burger from './Burger';
 import localFont from '@next/font/local'
 
 const LEMONMILK = localFont({ src: '../../fonts/lemon_milk/LEMONMILK-Regular.otf' })
@@ -16,6 +17,7 @@ const Header = async() => {
             <Navbar />
             <BuyTicketButton />
             <Search />
+            <Burger />
         </div>
     )
 }
