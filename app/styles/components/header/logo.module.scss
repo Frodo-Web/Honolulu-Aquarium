@@ -1,4 +1,5 @@
 @use './variables.scss' as v;
+@use '@styles/global/variables.scss' as g;
 
 .image {
     height: 70px;
@@ -6,10 +7,12 @@
 }
 .logo {
     position: relative;
+    display: block;
     width: v.$logo_width;
     &::after {
         content: 'Honolulu Aquarium';
         position: absolute;
+        color: g.$white;
         bottom: 3px;
         font-size: 12px;
         white-space: nowrap;
