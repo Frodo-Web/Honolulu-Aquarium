@@ -6,7 +6,7 @@
         // @include media(">=w1280", "<w1680") {
         @include media("<w1680") {
             .menu {
-                gap: navbar-1680(menu-column-gap);
+                column-gap: navbar-1680(menu-column-gap);
             }
         }
         // @include media(">=w760", "<w1280") {

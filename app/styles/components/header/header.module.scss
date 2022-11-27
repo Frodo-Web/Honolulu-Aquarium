@@ -1,16 +1,75 @@
 @use './variables.scss' as v;
+@use '@styles/global/variables.scss' as g;
 @use './responsive/header.scss' as r;
-.header {
+
+.headerWrapper {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    padding: 0px 75px;
-    display: grid;
-    grid-template-columns: v.$logo_width v.$schedule_width 1fr v.$ticketsButton_width v.$searchButton_width;
-    gap: 20px;
-    align-items: center;
     width: 100%;
-    height: v.$header_height;
+    .banner {
+        background-color: #f9c84a;
+        color: g.$black;
+        position: relative;
+        padding: 5px 40px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        line-height: 1.4;
+        &.show {
+            display: flex;   
+        }
+        .label {
+            font-weight: bold;
+        }
+        .value {
+            font-size: 17px;
+            font-weight: 500;
+            & > a {
+                color: inherit;
+            }
+        }
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            @mixin line {
+                content: "";
+                width: 2px;
+                height: 100%;
+                position: absolute;
+                background-color: g.$black;
+              }
+            &::before {
+                @include line;
+                transform: rotate(45deg);
+
+            }
+            &::after {
+                @include line;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .header {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 0px 75px;
+        display: grid;
+        grid-template-columns: v.$logo_width v.$schedule_width 1fr v.$ticketsButton_width v.$searchButton_width;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        height: v.$header_height;
+    }
 }
 @include r.responsive;

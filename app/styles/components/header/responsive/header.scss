@@ -2,7 +2,8 @@
 @use './values/header.scss' as *;
 
 @mixin responsive {
-    .header {
+    .headerWrapper {
+      .header {
         // @include media(">=w1280", "<w1680") {
         @include media("<w1680") {
             height: header-1680(height);
@@ -13,5 +14,6 @@
         // @include media(">=w760", "<w1280") {
         //     height: header-1280(height);
         // }
+      }
     }
 }
