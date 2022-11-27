@@ -14,6 +14,24 @@
                font-size: schedule-1680(value-font-size);
             }
         }
+        @include media("<w1200") {
+            position: schedule-1200(position);
+            top: schedule-1200(top);
+            border-radius: schedule-1200(border-radius);
+            width: schedule-1200(width);
+            height: schedule-1200(height);
+            flex-direction: schedule-1200(flex-direction);
+            justify-content: schedule-1200(justify-content);
+            align-items: schedule-1200(align-items);
+            transition: schedule-1200(transition);
+            column-gap: schedule-1200(column-gap);
+            &:hover {
+                border-radius: schedule-1200(border-radius);
+            }
+            .label {
+                padding: schedule-1200(label-padding);
+            }
+        }
         // @include media(">=w760", "<w1280") {
         //     height: header-1280(height);
         //     padding: header-1280(padding);

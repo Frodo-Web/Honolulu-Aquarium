@@ -4,3 +4,9 @@
     );
     @return map-get($w1280-1680, $property-name);
 }
+@function navbar-1200($property-name) {
+    $w1200: (
+        "position": absolute
+    );
+    @return map-get($w1200, $property-name);
+}

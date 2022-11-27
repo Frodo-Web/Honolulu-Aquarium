@@ -7,9 +7,19 @@
     );
     @return map-get($w1280-1680, $property-name);
 }
-@function schedule-1280($property-name) {
-    $w760-1280: (
-    "height": 60px
+@function schedule-1200($property-name) {
+    $w1200: (
+    "position": absolute,
+    "top": 66px,
+    "border-radius": 0px,
+    "width": 100%,
+    "height": 46px,
+    "flex-direction": row,
+    "justify-content": flex-end,
+    "align-items": center,
+    "transition": none,
+    "column-gap": 10px,
+    "label-padding": 0px,
     );
-    @return map-get($w760-1280, $property-name);
+    @return map-get($w1200, $property-name);
 }

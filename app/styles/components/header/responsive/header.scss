@@ -11,6 +11,9 @@
             grid-template-columns: header-1680(grid-template-columns);
             gap: header-1680(gap);
         }
+        @include media("<w1200") {
+            grid-template-columns: header-1200(grid-template-columns);
+        }
         // @include media(">=w760", "<w1280") {
         //     height: header-1280(height);
         // }

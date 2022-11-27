@@ -65,7 +65,7 @@
         z-index: 1;
         padding: 0px 75px;
         display: grid;
-        grid-template-columns: v.$logo_width v.$schedule_width 1fr v.$ticketsButton_width v.$searchButton_width;
+        grid-template-columns: v.$logo_width v.$schedule_width 1fr v.$ticketsButton_width v.$searchButton_width 1px;
         gap: 20px;
         align-items: center;
         width: 100%;

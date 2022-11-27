@@ -1,0 +1,9 @@
+@use '../../variables.scss' as v;
+
+@function burger-1200($property-name) {
+    $w1200: (
+    "visibility": visible,
+    "width": v.$burger_width
+    );
+    @return map-get($w1200, $property-name);
+}

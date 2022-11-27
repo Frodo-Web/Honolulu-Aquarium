@@ -1,16 +1,12 @@
 @use '@styles/breakpoints/media.scss' as *;
-@use './values/navbar.scss' as *;
+@use './values/burger.scss' as *;
 
 @mixin responsive {
-    .navbar {
+    .burger {
         // @include media(">=w1280", "<w1680") {
-        @include media("<w1680") {
-            .menu {
-                column-gap: navbar-1680(menu-column-gap);
-            }
-        }
         @include media("<w1200") {
-            position: navbar-1200(position);
+            visibility: burger-1200(visibility);
+            width: burger-1200(width);
         }
         // @include media(">=w760", "<w1280") {
         //     height: header-1280(height);

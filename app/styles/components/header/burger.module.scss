@@ -1,22 +1,32 @@
+@use './variables.scss' as v;
+@use './responsive/burger.scss' as r;
+
 .burger {
-    display: none;
+    // display: none;
+    visibility: hidden;
     cursor: pointer;
+    z-index: 2;
+    position: relative;
+    // right: 24px;
+    width: 1px;
+    height: 14px;
+    .line {
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 1px;
+        &:first-child {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+        }
+        &:last-child {
+            bottom: 0;
+        }
+    }
 }
-.line {
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 1px;
-    &:first-child {
-        top: 0;
-    }
-    &:nth-child(2) {
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-    }
-    &:last-child {
-        bottom: 0;
-    }
-}
+@include r.responsive;

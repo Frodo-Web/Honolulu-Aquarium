@@ -6,14 +6,14 @@
     $w1280-1680: (
     "height": 70px,
     "padding": 0px 15px,
-    "grid-template-columns": v.$logo_width schedule-1680(width) 1fr ticket-1680(max-width) v.$searchButton_width,
+    "grid-template-columns": v.$logo_width schedule-1680(width) 1fr ticket-1680(max-width) v.$searchButton_width 1px,
     "gap": 10px
     );
     @return map-get($w1280-1680, $property-name);
 }
-@function header-1280($property-name) {
-    $w760-1280: (
-    "height": 70px,
+@function header-1200($property-name) {
+    $w1200: (
+    "grid-template-columns": v.$logo_width ticket-1680(max-width) v.$searchButton_width v.$burger_width,
     );
-    @return map-get($w760-1280, $property-name);
+    @return map-get($w1200, $property-name);
 }
