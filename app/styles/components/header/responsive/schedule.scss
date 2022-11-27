@@ -1,0 +1,22 @@
+@use '@styles/breakpoints/media.scss' as *;
+@use './values/schedule.scss' as *;
+
+@mixin responsive {
+    .schedule {
+        // @include media(">=w1280", "<w1680") {
+        @include media("<w1680") {
+            height: schedule-1680(height);
+            width: schedule-1680(width);
+            .label {
+                font-size: schedule-1680(label-font-size);
+            }
+            .value {
+               font-size: schedule-1680(value-font-size);
+            }
+        }
+        // @include media(">=w760", "<w1280") {
+        //     height: header-1280(height);
+        //     padding: header-1280(padding);
+        // }
+    }
+}

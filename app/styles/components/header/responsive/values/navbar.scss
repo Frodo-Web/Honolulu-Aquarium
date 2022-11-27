@@ -1,0 +1,6 @@
+@function navbar-1680($property-name) {
+    $w1280-1680: (
+        "menu-column-gap": 15px
+    );
+    @return map-get($w1280-1680, $property-name);
+}

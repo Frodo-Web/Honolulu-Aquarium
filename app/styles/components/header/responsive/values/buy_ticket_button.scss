@@ -1,0 +1,9 @@
+@function ticket-1680($property-name) {
+    $w1280-1680: (
+    "height": 40px,
+    "line-height": 40px,
+    "max-width": 120px,
+    "font-size": 11px
+    );
+    @return map-get($w1280-1680, $property-name);
+}

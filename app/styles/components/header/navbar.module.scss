@@ -1,22 +1,26 @@
 @use '@styles/global/variables.scss' as g;
+@use './responsive/navbar.scss' as r;
+
 
 .navbar {
     padding: 0px 20px;
-    & .menu {
+    .menu {
         display: flex;
-        justify-content: flex-start;
-        gap: 30px;
-        & a {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        a {
             text-decoration: none;
             color: inherit;
             font-size: 12px;
             letter-spacing: 1px;
             line-height: 22px;
         }
-        & li {
+        li {
             position: relative;
         }
-        & .firstLevelItem {
+        .firstLevelItem {
             position: relative;
             &::after {
                 content: '';
@@ -38,14 +42,14 @@
                     width: 100%;
                     opacity: 1;
                 }
-                & .subMenu {
+                .subMenu {
                     visibility: visible;
                     opacity: 1;
                     top: 48px;
                     transform: translateY(0px);
                 }
             }
-            & .subMenu {
+            .subMenu {
                 visibility: hidden;
                 opacity: 0;
                 position: absolute;
@@ -95,8 +99,13 @@
                 }
             }
         }
-        & .firstLevelItem:last-of-type .subMenu::after {
+        .firstLevelItem:last-of-type .subMenu::after {
             left: calc(100% - 60px);
+        }
+        .firstLevelItem:last-of-type .subMenu {
+            left: auto;
+            right: 0;
         }
     }
 }
+@include r.responsive;

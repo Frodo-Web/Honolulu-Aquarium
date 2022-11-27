@@ -1,0 +1,19 @@
+@use './buy_ticket_button.scss' as *;
+@use './schedule.scss' as *;
+@use '../../variables.scss' as v;
+
+@function header-1680($property-name) {
+    $w1280-1680: (
+    "height": 70px,
+    "padding": 0px 15px,
+    "grid-template-columns": v.$logo_width schedule-1680(width) 1fr ticket-1680(max-width) v.$searchButton_width,
+    "gap": 10px
+    );
+    @return map-get($w1280-1680, $property-name);
+}
+@function header-1280($property-name) {
+    $w760-1280: (
+    "height": 70px,
+    );
+    @return map-get($w760-1280, $property-name);
+}

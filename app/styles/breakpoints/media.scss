@@ -2,9 +2,10 @@
 // Author: Eduardo Boucas <mail@eduardoboucas.com>
 
 $breakpoints: (
-  'tablet': 760px,
-	'widescreen-720p': 1280px, 
-	'widescreen-1080p': 1680px
+  'w760': 760px,
+	'w1280': 1280px, 
+	'w1680': 1680px,
+  'w1920': 1920px
 ) !default;
 
 $media-expressions: (

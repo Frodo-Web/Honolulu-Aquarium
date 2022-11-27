@@ -1,4 +1,5 @@
 @use './variables.scss' as v;
+@use './responsive/buy_ticket_button.scss' as r;
 
 .button {
     cursor: pointer;
@@ -18,3 +19,4 @@
         background-color: #e9b01d;
     }
 }
+@include r.responsive;

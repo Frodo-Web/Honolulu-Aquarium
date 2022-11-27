@@ -1,10 +1,6 @@
 @use './variables.scss' as v;
 @use '@styles/global/variables.scss' as g;
 
-.image {
-    height: 70px;
-    width: auto;
-}
 .logo {
     position: relative;
     display: block;
@@ -24,5 +20,9 @@
         text-shadow: 1px 1px black;
         bottom: 30%;
         z-index: 1;
+    }
+    .image {
+        height: 70px;
+        width: auto;
     }
 }

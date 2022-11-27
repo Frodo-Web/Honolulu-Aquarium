@@ -1,4 +1,5 @@
 @use './variables.scss' as v;
+@use './responsive/schedule.scss' as r;
 
 .schedule {
     background: url(./media/texture.svg) no-repeat center/cover;
@@ -18,12 +19,13 @@
         border-radius: 40px 10px;
         text-shadow: 1px 1px black;
     }
+    .label {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+    .value {
+        font-size: 24px;
+        text-align: center;
+    }
 }
-.label {
-    font-size: 14px;
-    padding-left: 20px;
-}
-.value {
-    font-size: 24px;
-    text-align: center;
-}
+@include r.responsive;

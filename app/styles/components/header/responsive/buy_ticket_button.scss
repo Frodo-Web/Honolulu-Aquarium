@@ -1,0 +1,18 @@
+@use '@styles/breakpoints/media.scss' as *;
+@use './values/buy_ticket_button.scss' as *;
+
+@mixin responsive {
+    .button {
+        // @include media(">=w1280", "<w1680") {
+        @include media("<w1680") {
+            height: ticket-1680(height);
+            line-height: ticket-1680(line-height);
+            max-width: ticket-1680(max-width);
+            font-size: ticket-1680(font-size);
+        }
+        // @include media(">=w760", "<w1280") {
+        //     height: header-1280(height);
+        //     padding: header-1280(padding);
+        // }
+    }
+}
