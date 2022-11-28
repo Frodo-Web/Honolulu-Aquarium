@@ -5,7 +5,7 @@ import styles from '@styles/components/header/header.module.scss';
 
 const Banner = () => {
     const handleClick = (e) => {
-        e.target.parentNode.classList.remove(styles.show);
+        document.getElementsByClassName(styles.banner)[0].classList.remove(styles.show);
     }
     return (
         <div className={`${styles.banner} ${styles.show}`}>

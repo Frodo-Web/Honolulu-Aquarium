@@ -1,5 +1,6 @@
 @use '@styles/breakpoints/media.scss' as *;
 @use './values/navbar.scss' as *;
+@use '../header.module.scss' as h;
 
 @mixin responsive {
     .navbar {
@@ -11,6 +12,21 @@
         }
         @include media("<w1200") {
             position: navbar-1200(position);
+            transform: navbar-1200(transform);
+            z-index: navbar-1200(z-index);
+            width: navbar-1200(width);
+            left: navbar-1200(left);
+            top: navbar-1200(top);
+            height: navbar-1200(height);
+            min-height: navbar-1200(min-height);
+            overflow: navbar-1200(overflow);
+            transition: navbar-1200(transition);
+            &.opened {
+                transform: navbar-1200(opened);
+            }
+            .menu {
+
+            }
         }
         // @include media(">=w760", "<w1280") {
         //     height: header-1280(height);

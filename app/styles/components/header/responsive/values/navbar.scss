@@ -6,7 +6,17 @@
 }
 @function navbar-1200($property-name) {
     $w1200: (
-        "position": absolute
+        "position": absolute,
+        "transform": translateY(-100%),
+        "opened": translateY(0),
+        "z-index": 2,
+        "width": 100vw,
+        "left": 0,
+        "top": 0,
+        "height": calc(88vh + 10px),
+        "min-height": 660px,
+        "overflow": auto,
+        "transition": all ease 1s,
     );
     @return map-get($w1200, $property-name);
 }

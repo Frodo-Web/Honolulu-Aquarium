@@ -1,8 +1,14 @@
-import styles from '@styles/components/header/burger.module.scss';
+'use client';
 
-const Burger = async() => {
+import styles from '@styles/components/header/burger.module.scss';
+import navbar from '@styles/components/header/navbar.module.scss';
+
+const Burger = () => {
+    const handleClick = (e) => {
+        document.getElementsByClassName(navbar.navbar)[0].classList.toggle(navbar.opened);
+    }
     return (
-        <div className={styles.burger}>
+        <div className={styles.burger} onClick={handleClick}>
             <span className={styles.line}></span>
             <span className={styles.line}></span>
             <span className={styles.line}></span>
