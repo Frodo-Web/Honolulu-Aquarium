@@ -6,9 +6,9 @@ import Navbar from './Navbar';
 import BuyTicketButton from './BuyTicketButton';
 import Search from './Search';
 import Burger from './Burger';
-import localFont from '@next/font/local'
+// import localFont from '@next/font/local'
 
-const LEMONMILK = localFont({ src: '../../fonts/lemon_milk/LEMONMILK-Regular.otf' })
+// const LEMONMILK = localFont({ src: '../../fonts/lemon_milk/LEMONMILK-Regular.otf' })
 
 const Header = async () => {
     return (
@@ -24,7 +24,8 @@ export default Header;
 
 const Main = async () => {
     return (
-        <div className={`${styles.header} ${LEMONMILK.className}`}>
+        // <div className={`${styles.header} ${LEMONMILK.className}`}>
+        <div className={styles.header}>
             <Logo />
             <Schedule />
             <Navbar />

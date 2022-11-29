@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import styles from '@styles/components/header/navbar.module.scss';
-import localFont from '@next/font/local'
+// import localFont from '@next/font/local'
 
-const LEMONMILK = localFont({ src: '../../fonts/lemon_milk/LEMONMILK-Light.otf' })
+// const LEMONMILK = localFont({ src: '../../fonts/lemon_milk/LEMONMILK-Light.otf' })
 
 const Navbar = async () => {
     return (
@@ -69,5 +69,6 @@ const FirstLevelItem = async ({ children }) => {
     return <li className={styles.firstLevelItem}>{children}</li>
 }
 const SubMenu = async ({ children }) => {
-    return <ul className={`${styles.subMenu} ${LEMONMILK.className}`}>{children}</ul>
+    // return <ul className={`${styles.subMenu} ${LEMONMILK.className}`}>{children}</ul>
+    return <ul className={styles.subMenu}>{children}</ul>
 }

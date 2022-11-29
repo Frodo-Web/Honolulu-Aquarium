@@ -1,9 +1,22 @@
 @use '@styles/global/variables.scss' as g;
 @use './responsive/navbar.scss' as r;
 
+@font-face {
+    font-family: 'LEMONMILK-Light';
+    src: url(../../../fonts/lemon_milk/LEMONMILK-Light.otf);
+}
+@font-face {
+    font-family: 'LEMONMILK-Regular';
+    src: url(../../../fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+@font-face {
+    font-family: 'LEMONMILK-Bold';
+    src: url(../../../fonts/lemon_milk/LEMONMILK-Bold.otf);
+}
 
 .navbar {
     padding: 0px 20px;
+    
     .menu {
         display: flex;
         justify-content: flex-start;
@@ -64,6 +77,7 @@
                 padding: 0 20px;
                 box-shadow: 0 0 10px rgba(0,0,0,.1),0 10px 20px rgba(0,0,0,.1);
                 transform: translateY(10px);
+                font-family: 'LEMONMILK-Light';
                 & > a {
                     display: block;
                     position: relative;

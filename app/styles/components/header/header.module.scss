@@ -2,6 +2,11 @@
 @use '@styles/global/variables.scss' as g;
 @use './responsive/header.scss' as r;
 
+@font-face {
+    font-family: 'LEMONMILK-Regular';
+    src: url(../../../fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
 .headerWrapper {
     position: fixed;
     top: 0;
@@ -71,6 +76,7 @@
         align-items: center;
         width: 100%;
         height: v.$header_height;
+        font-family: 'LEMONMILK-Regular';
     }
 }
 @include r.responsive;

@@ -1,6 +1,7 @@
 @use '@styles/breakpoints/media.scss' as *;
 @use './values/navbar.scss' as *;
 @use '../header.module.scss' as h;
+@use '@styles/global/variables' as g;
 
 @mixin responsive {
     .navbar {
@@ -11,6 +12,7 @@
             }
         }
         @include media("<w1200") {
+
             position: navbar-1200(position);
             transform: navbar-1200(transform);
             z-index: navbar-1200(z-index);
@@ -21,11 +23,81 @@
             min-height: navbar-1200(min-height);
             overflow: navbar-1200(overflow);
             transition: navbar-1200(transition);
+            &::after {
+                content: '';
+                z-index: 1;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                background: url(../media/menu_mask.png) repeat-x left bottom/100% auto;
+            }
             &.opened {
                 transform: navbar-1200(opened);
             }
             .menu {
-
+                position: relative;
+                z-index: 2;
+                min-height: calc(660px - 210px);
+                height: calc(88vh - 210px);
+                padding: 132px 24px 24px;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                row-gap: 30px;
+                .firstLevelItem {
+                    width: 100%;
+                    &::after {
+                        content: none;
+                    }
+                    & > a {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        font-size: 20px;
+                        line-height: 28px;
+                        font-family: 'LEMONMILK-Bold';
+                        font-weight: bold;
+                        &::before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            margin: auto 0;
+                            width: 15px;
+                            height: 10px;
+                            background: url(../media/arrow.svg) no-repeat center/contain;
+                        }
+                    }
+                    .subMenu {
+                        display: none;
+                        opacity: 1;
+                        visibility: visible;
+                        width: 100%;
+                        position: static;
+                        background: 0 0;
+                        box-shadow: none;
+                        border-radius: 0;
+                        padding: 0;
+                        margin: 0;
+                        transform: none;
+                        &.show {
+                            display: block;
+                        }
+                        & > a {
+                            margin-top: 20px;
+                            height: auto;
+                            padding: 0;
+                            color: g.$white;
+                            font-family: 'LEMONMILK-Regular';
+                            font-size: 16px;
+                            line-height: 26px;
+                        }
+                    }
+                }
             }
         }
         // @include media(">=w760", "<w1280") {
