@@ -1,3 +1,4 @@
+import MenuLink from './MenuLink';
 import Link from 'next/link';
 import styles from '@styles/components/header/navbar.module.scss';
 // import localFont from '@next/font/local'
@@ -9,7 +10,7 @@ const Navbar = async () => {
         <nav className={styles.navbar}>
             <ul className={styles.menu}>
                 <FirstLevelItem>
-                    <Link href='/'>Plan a visit</Link>
+                    <MenuLink href='/'>Plan a visit</MenuLink>
                     <SubMenu>
                         <Link href='/'>Buy tickets</Link>
                         <Link href='/'>Pricing</Link>
@@ -22,7 +23,7 @@ const Navbar = async () => {
                     </SubMenu>
                 </FirstLevelItem>
                 <FirstLevelItem>
-                    <Link href='/'>Experiences</Link>
+                    <MenuLink href='/'>Experiences</MenuLink>
                     <SubMenu>
                         <Link href='/'>Aquari-OM Yoga Classes</Link>
                         <Link href='/'>Coral Spawning</Link>
@@ -32,7 +33,7 @@ const Navbar = async () => {
                     </SubMenu>
                 </FirstLevelItem>
                 <FirstLevelItem>
-                    <Link href='/'>Animals & Exhibits</Link>
+                    <MenuLink href='/'>Animals & Exhibits</MenuLink>
                     <SubMenu>
                         <Link href='/'>Hawaiʻi’s Marine Life</Link>
                         <Link href='/'>Exhibits</Link>
@@ -41,7 +42,7 @@ const Navbar = async () => {
                     </SubMenu>
                 </FirstLevelItem>
                 <FirstLevelItem>
-                    <Link href='/'>Conservation & Community</Link>
+                    <MenuLink href='/'>Conservation & Community</MenuLink>
                     <SubMenu>
                         <Link href='/'>Beach Cleanups</Link>
                         <Link href='/'>We Live Ocean Aloha</Link>
@@ -50,7 +51,7 @@ const Navbar = async () => {
                     </SubMenu>
                 </FirstLevelItem>
                 <FirstLevelItem>
-                    <Link href='/'>About Us</Link>
+                    <MenuLink href='/'>About Us</MenuLink>
                     <SubMenu>
                         <Link href='/'>Our story</Link>
                         <Link href='/'>Newsroom</Link>
