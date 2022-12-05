@@ -74,9 +74,9 @@
                         }
                     }
                     .subMenu {
-                        display: none;
+                        // display: none;
                         opacity: 1;
-                        visibility: visible;
+                        visibility: hidden;
                         width: 100%;
                         position: static;
                         background: 0 0;
@@ -84,18 +84,20 @@
                         border-radius: 0;
                         padding: 0;
                         margin: 0;
+                        transform-origin: top left;
                         transform: none;
 
-                        height: 0px;
                         overflow: hidden;
-                        transition: height ease 1s;
+                        height: 0px;
+                        transition: all ease 0.5s;
+
                         &::after {
                             content: none;
                         }
                         &.show {
-                            display: block;
-
-                            height: 300px;
+                            // display: block;
+                            visibility: visible;
+                            height: var(--height);
                         }
                         & > a {
                             margin-top: 20px;
