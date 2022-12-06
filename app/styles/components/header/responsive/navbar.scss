@@ -72,6 +72,9 @@
                             height: 10px;
                             background: url(../media/arrow.svg) no-repeat center/contain;
                         }
+                        &.show::before {
+                            transform: scaleY(-1);
+                        }
                     }
                     .subMenu {
                         // display: none;

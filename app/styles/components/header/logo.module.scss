@@ -5,6 +5,7 @@
     position: relative;
     display: block;
     width: v.$logo_width;
+    z-index: 3;
     &::after {
         content: 'Honolulu Aquarium';
         position: absolute;

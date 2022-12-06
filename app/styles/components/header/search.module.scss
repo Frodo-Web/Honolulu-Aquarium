@@ -1,8 +1,13 @@
 @use './variables.scss' as v;
+@use './responsive/search.scss' as r;
 
 .search {
+    position: relative;
     background: url(./media/search.svg) no-repeat center/contain;
     width: v.$searchButton_width;
     height: 22px;
     cursor: pointer;
+    z-index: 3;
 }
+
+@include r.responsive;

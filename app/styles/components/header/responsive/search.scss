@@ -1,0 +1,9 @@
+@use '@styles/breakpoints/media.scss' as *;
+
+@mixin responsive {
+    .search {
+        @include media("<w1200") {
+            justify-self: end;
+        }
+    }
+}

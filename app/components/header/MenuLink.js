@@ -19,15 +19,21 @@ const MenuLink = ({ children, href }) => {
     }, []);
     const handleClick = (e) => {
         const target = e.target;
-        if (target.nextSibling.classList.contains(styles.show)) {
+        if (target.nextSibling.classList.contains(styles.show) || target.classList.contains(styles.show)) {
             target.nextSibling.classList.remove(styles.show);
+            target.classList.remove(styles.show);
             return;
         }
         const firstLevelItems = document.querySelectorAll('.' + styles.firstLevelItem + ' > ul');
+        const links = document.querySelectorAll('.' + styles.firstLevelItem + ' > a');
         firstLevelItems.forEach((el, idx) => {
             el.classList.remove(styles.show);
         })
+        links.forEach((el, idx) => {
+            el.classList.remove(styles.show);
+        })
         target.nextSibling.classList.add(styles.show);
+        target.classList.add(styles.show);
     }
     return <Link href={href} onClick={handleClick} ref={hook}>{children}</Link>
 }
