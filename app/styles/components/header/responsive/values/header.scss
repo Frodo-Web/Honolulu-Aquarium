@@ -15,7 +15,7 @@
     $w1200: (
     // "grid-template-columns": v.$logo_width ticket-1680(max-width) v.$searchButton_width v.$burger_width,
     "grid-template-columns": v.$logo_width ticket-1680(max-width) 1fr v.$burger_width,
-    "padding": 5px 15px,
+    "padding": 0px 15px,
     );
     @return map-get($w1200, $property-name);
 }

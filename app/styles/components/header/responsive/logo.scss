@@ -1,0 +1,9 @@
+@use '@styles/breakpoints/media.scss' as *;
+
+@mixin responsive {
+    .logo {
+        @include media("<w1200") {
+            background-color: #0d2b57;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 @use './variables.scss' as v;
 @use '@styles/global/variables.scss' as g;
+@use './responsive/logo.scss' as r;
 
 .logo {
     position: relative;
@@ -27,3 +28,4 @@
         width: auto;
     }
 }
+@include r.responsive;
