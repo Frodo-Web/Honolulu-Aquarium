@@ -10,6 +10,9 @@
             max-width: ticket-1680(max-width);
             font-size: ticket-1680(font-size);
         }
+        @include media("<w500") {
+            display: none;
+        }
         // @include media(">=w760", "<w1280") {
         //     height: header-1280(height);
         //     padding: header-1280(padding);

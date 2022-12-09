@@ -19,3 +19,9 @@
     );
     @return map-get($w1200, $property-name);
 }
+@function header-500($property-name) {
+    $w500: (
+        "grid-template-columns": v.$logo_width 1fr v.$burger_width,
+        );
+        @return map-get($w500, $property-name);
+}

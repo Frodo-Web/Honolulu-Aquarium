@@ -16,6 +16,9 @@
             padding: header-1200(padding);
             background-color: #0d2b57;
         }
+        @include media("<w500") {
+          grid-template-columns: header-500(grid-template-columns);
+        }
         // @include media(">=w760", "<w1280") {
         //     height: header-1280(height);
         // }
